@@ -17,7 +17,7 @@ export const HeroSection = () => {
 
   return (
     <section
-      id="hero"
+      id="home"
       className="relative min-h-screen flex flex-col items-center justify-start px-4 pt-32"
     >
       {/* Intro text */}
