@@ -15,9 +15,9 @@ origins = [  # Vite servers
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,  # allows only these origins
-    allow_credentials=False, # we dont need authentication
-    allow_methods=["POST"],  # allows only this method
-    allow_headers=["Content-Type"],  # Allows all headers
+    allow_credentials=True, # we dont need authentication
+    allow_methods=["*"],   
+    allow_headers=["*"],   
 )
 
 model = load_model("best_model.h5") # load the trained model
