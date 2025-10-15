@@ -26,6 +26,8 @@ export const PredictorSection = () => {
     formData.employment_status &&
     formData.income &&
     formData.marital_status;
+  
+  const API_URL = "https://dv-backend-vrdy.onrender.com/predict"
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,7 +35,7 @@ export const PredictorSection = () => {
     setResult(null);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/predict", {
+      const response = await fetch(API_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

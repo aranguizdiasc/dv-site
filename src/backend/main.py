@@ -6,10 +6,8 @@ from tensorflow.keras.models import load_model
 
 app = FastAPI() # creates a web app API
 
-# Hey, allow anyone (like my React front end) to send requests to this backend
-origins = [
-    "http://localhost:5173",  # your local Vite dev server
-    "http://127.0.0.1:5173"
+# These are the websites allowed to make API calls to me
+origins = [  # Vite servers
     "https://dv-predictor.com",
     "https://dv-site-carolina-aranguiz-dias-projects.vercel.app"
     ]
