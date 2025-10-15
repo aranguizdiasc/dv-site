@@ -23,15 +23,17 @@ export const HeroSection = () => {
       {/* Intro text */}
       <div className="container mx-auto text-left z-10 max-w-4xl">
         <h1 className="mb-8">
-          <span className="tracking-tight font-bold text-primary text-4xl md:text-5xl">
-            Domestic violence affects millions of women and families worldwide,
-            often going unreported or unseen.
+          <span className="font-bold text-primary text-4xl md:text-5xl">
+            Domestic violence against women remains one of the most widespread yet underreported
+            human rights violations globally
           </span>
           <span className="opacity-0 animate-fade-in-delay-1 block mt-4 text-foreground text-lg md:text-xl leading-relaxed">
-            Through data analysis and machine learning, we can uncover patterns,
-            highlight risk factors, and empower prevention efforts. This project
-            aims to raise awareness and demonstrate how technology can be used
-            to promote safety and understanding.
+            Across many regions, especially in rural and developing areas, social stigma, lack of resources, 
+            and fear prevent countless survivors from seeking help. Violence against women is preventable — by identifying
+            early signs of risk and connecting survivors to proper care and support,
+            together we can help break the cycle of abuse.  
+            By using machine learning to analyze patterns within social, economic, and demographic factors, 
+            we can begin to understand and identify risk conditions for domestic violence earlier, supporting awareness and prevention.
           </span>
         </h1>
       </div>
@@ -41,21 +43,21 @@ export const HeroSection = () => {
         <div className="opacity-0 animate-fade-in-delay-2">
           <h2 className="text-primary text-7xl md:text-8xl font-bold">24%</h2>
           <p className="text-foreground text-lg md:text-xl mt-2">
-            of women experience severe physical violence by an intimate partner.
+            of women experience severe physical violence by an intimate partner
           </p>
         </div>
 
         <div className="opacity-0 animate-fade-in-delay-3">
-          <h2 className="text-primary text-7xl md:text-8xl font-bold">1 in 4</h2>
+          <h2 className="text-primary text-7xl md:text-8xl font-bold">5 million</h2>
           <p className="text-foreground text-lg md:text-xl mt-2">
-            women will experience domestic violence in their lifetime.
+            acts of domestic violence occur annually to women aged 18 years and older
           </p>
         </div>
 
         <div className="opacity-0 animate-fade-in-delay-4">
-          <h2 className="text-primary text-7xl md:text-8xl font-bold">60%</h2>
+          <h2 className="text-primary text-7xl md:text-8xl font-bold">44%</h2>
           <p className="text-foreground text-lg md:text-xl mt-2">
-            of cases go unreported, leaving survivors without the support they need.
+            (or more) of cases go unreported, leaving survivors without the support they need
           </p>
         </div>
       </div>

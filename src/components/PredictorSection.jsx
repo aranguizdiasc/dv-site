@@ -62,20 +62,48 @@ export const PredictorSection = () => {
       id="predictor"
       className="relative py-24 px-6 md:px-16 bg-secondary/30 text-foreground"
     >
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Left side: Model description */}
         <div className="max-w-xl">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-            Understanding the Model
+            Machine Learning as a Tool for Preventing Domestic Violence
           </h2>
           <p className="text-lg text-foreground/80 leading-relaxed mb-4">
-            This machine learning model was trained on global survey data related to domestic violence. It analyzes key social and economic
-            factors such as <strong>age, education level, income, and employment status</strong> to estimate the likelihood that an
-            individual may experience domestic violence.
+            This model was trained using 
+            <a 
+            href="https://www.kaggle.com/datasets/fahmidachowdhury/domestic-violence-against-women" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className=" italic font-medium hover:underline mx-1"
+            >
+              data on domestic violence against women in a rural area of a developing country,
+            </a>
+            where each record represents an individual woman, including her <strong>age, education level, income, employment status, </strong> 
+            and <strong>marital status</strong>. Like most real-world data on domestic violence, this dataset is highly 
+            <strong> imbalanced</strong>: around <strong>75% of entries represent non-violence cases</strong> and 
+            only a small portion reflect actual incidents of abuse. This skewed class distribution is not an error but a defining
+            characteristic of domestic violence data, reflecting the reality of underreporting. 
+            Such imbalance poses a critical modeling challenge, since a naive classifier could achieve high accuracy simply by
+            predicting “non-violence” in most cases.
           </p>
+
+          <p className="text-lg text-foreground/80 leading-relaxed mb-4">
+            For this analysis, the majority class was undersampled before standardizing the data to address this. Several algorithms were tested, including 
+            <strong> Decision Trees</strong> and <strong>K-Nearest Neighbors (KNN), </strong>  
+            to compare interpretability and recall. The best performance was achieved by a 
+            <strong> feed-forward neural network (NN)</strong> trained using <strong>10-fold cross-validation</strong>.
+            The final neural network achieved ~ 
+            <strong> 74% accuracy</strong> on the validation set with significantly improved recall 
+            (catching more true positive violence cases). While slightly less accurate overall, 
+            it identified a higher percentage of at-risk individuals which is an essential tradeoff 
+            for real-world prevention.
+          </p>
+
           <p className="text-lg text-foreground/80 leading-relaxed">
-            The goal of this project is not to label individuals but to identify patterns that can help inform awareness, prevention, and
-            early intervention efforts.
+            The trained model and scaler were 
+            integrated to enable live predictions directly from this web app. 
+            This interactive tool aims to demonstrate how <strong>machine learning</strong> can contribute to 
+            awareness and prevention surrounding domestic violence.
           </p>
         </div>
 
