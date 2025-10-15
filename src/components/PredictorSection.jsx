@@ -29,11 +29,6 @@ export const PredictorSection = () => {
   
   const API_URL = "https://dv-backend-vrdy.onrender.com/predict"
 
-  useEffect(() => {
-    fetch("https://dv-backend-vrdy.onrender.com/")
-      .catch(() => console.log("Backend still waking up, please try again in 1 minute"));
-  }, []);
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
