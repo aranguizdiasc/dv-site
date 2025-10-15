@@ -29,6 +29,11 @@ export const PredictorSection = () => {
   
   const API_URL = "https://dv-backend-vrdy.onrender.com/predict"
 
+  useEffect(() => {
+    fetch("https://dv-backend-vrdy.onrender.com/")
+      .catch(() => console.log("Backend still waking up, please try again in 1 minute"));
+  }, []);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -52,7 +57,7 @@ export const PredictorSection = () => {
       }, 1200);
     } catch (err) {
       console.error(err);
-      alert("Error connecting to the prediction server.");
+      alert("Backend waking up, please try again in 1 minute.");
       setLoading(false);
     }
   };
