@@ -10,6 +10,9 @@ export const ContactSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">
             Connect With Me
           </h2>
+          <p className="text-lg text-foreground/80 mb-10">
+          Feel free to reach out with any questions, feedback, or collaborations!
+          </p>
         </div>
 
         <div className="flex items-center justify-center space-x-3 mb-12">
